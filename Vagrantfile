@@ -15,7 +15,13 @@ Vagrant.configure(2) do |config|
       'site-cookbooks'
     ]
 
+    # Set node attributes
+    chef.json = {
+      home: '/home/vagrant'
+    }
+
     # Add recipes to run_list
     chef.add_recipe 'git'
+    chef.add_recipe 'dotfiles'
   end
 end
