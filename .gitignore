@@ -10,3 +10,8 @@
 # Vim
 ###
 *.swp
+
+###
+# Vagrant
+###
+.vagrant
