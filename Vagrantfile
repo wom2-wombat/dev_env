@@ -23,5 +23,6 @@ Vagrant.configure(2) do |config|
     # Add recipes to run_list
     chef.add_recipe 'git'
     chef.add_recipe 'dotfiles'
+    chef.add_recipe 'tmux'
   end
 end
