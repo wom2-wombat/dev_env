@@ -7,4 +7,15 @@ Vagrant.configure(2) do |config|
 
   # Install chef
   config.omnibus.chef_version = :latest
+
+  # Run chef
+  config.vm.provision 'chef_solo' do |chef|
+    # Set locations of cookbook dirs
+    chef.cookbooks_path = [
+      'site-cookbooks'
+    ]
+
+    # Add recipes to run_list
+    chef.add_recipe 'git'
+  end
 end
